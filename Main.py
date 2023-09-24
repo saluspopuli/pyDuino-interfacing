@@ -13,3 +13,4 @@ def readserial(comport, baudrate):
 if __name__ == '__main__':
 
     readserial('COM9', 9600)
+    #test
