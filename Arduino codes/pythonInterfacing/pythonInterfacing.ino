@@ -1,9 +1,11 @@
 
-#define POTENTIOMETER A0
+#define POTENTIOMETER1 A0
+#define POTENTIOMETER2 A1
 
 void setup() {
   
-  pinMode(POTENTIOMETER, INPUT);
+  pinMode(POTENTIOMETER1, INPUT);
+  pinMode(POTENTIOMETER2, INPUT);
 
   Serial.begin(9600);
 
@@ -11,7 +13,10 @@ void setup() {
 
 void loop() {
   
-  Serial.println(analogRead(POTENTIOMETER));
-  delay(1000);
+  Serial.print(analogRead(POTENTIOMETER1));
+  Serial.print("-");
+  Serial.print(analogRead(POTENTIOMETER2));
+  Serial.println();
+  delay(10);
 
 }
